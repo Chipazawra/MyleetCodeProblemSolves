@@ -1,17 +1,19 @@
+//https://leetcode.com/problems/number-of-islands/
 package numberOfIslands
 
 import (
 	"fmt"
 )
 
-func NumberOfIslands(grid [][]byte) {
-	numberOfIslands(grid)
+func NumberOfIslands(grid [][]byte) int {
+	return numberOfIslands(grid)
 }
 
-func numberOfIslands(grid [][]byte) {
+func numberOfIslands(grid [][]byte) int {
 
 	adjacencyList := make(map[int][]int)
-	//visitedNodes := make(map[int]bool)
+	visitedNodes := make(map[int]bool)
+	numberOfIslands := 0
 
 	for i, _ := range grid {
 		for j, _ := range grid[i] {
@@ -56,6 +58,16 @@ func numberOfIslands(grid [][]byte) {
 		}
 	}
 
+	for node, _ := range adjacencyList {
+		if _, exist := visitedNodes[node]; exist {
+			continue
+		} else {
+			numberOfIslands++
+			DFS(node, adjacencyList, visitedNodes)
+		}
+	}
+
+	return numberOfIslands
 }
 
 func IJToIndex(i, j, lenght int) int {
@@ -64,4 +76,15 @@ func IJToIndex(i, j, lenght int) int {
 
 func IndexToIJ(index, lenght int) (int, int) {
 	return index / lenght, index % lenght
+}
+
+func DFS(node int, adjacencyList map[int][]int, visitedNodes map[int]bool) {
+
+	visitedNodes[node] = true
+	for _, v := range adjacencyList[node] {
+		if _, exist := visitedNodes[v]; !exist {
+			DFS(v, adjacencyList, visitedNodes)
+		}
+	}
+
 }
