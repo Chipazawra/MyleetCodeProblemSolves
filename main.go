@@ -30,20 +30,20 @@ func main() {
 		[]byte{'0', '0', '0', '1', '1'},
 	}))
 
-	// fmt.Println(mergeintervals.Merge([][]int{
-	// 	[]int{1, 3},
-	// 	[]int{2, 6},
-	// 	[]int{8, 10},
-	// 	[]int{15, 18},
-	// }))
-	// fmt.Println(mergeintervals.Merge([][]int{
-	// 	[]int{1, 4},
-	// 	[]int{4, 5},
-	// }))
-	// fmt.Println(mergeintervals.Merge([][]int{
-	// 	[]int{1, 4},
-	// 	[]int{0, 4},
-	// }))
+	fmt.Println(mergeintervals.Merge([][]int{
+		[]int{1, 3},
+		[]int{2, 6},
+		[]int{8, 10},
+		[]int{15, 18},
+	}))
+	fmt.Println(mergeintervals.Merge([][]int{
+		[]int{1, 4},
+		[]int{4, 5},
+	}))
+	fmt.Println(mergeintervals.Merge([][]int{
+		[]int{1, 4},
+		[]int{0, 4},
+	}))
 	fmt.Println(mergeintervals.Merge([][]int{
 		[]int{0, 0},
 		[]int{1, 4},
