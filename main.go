@@ -5,6 +5,7 @@ import (
 
 	mergeintervals "github.com/Chipazawra/MyleetCodeProblemSolves/problems/mergeIntervals"
 	"github.com/Chipazawra/MyleetCodeProblemSolves/problems/numberOfIslands"
+	topKFrequentWords "github.com/Chipazawra/MyleetCodeProblemSolves/problems/topKFrequentWords"
 	"github.com/Chipazawra/MyleetCodeProblemSolves/problems/validParentheses"
 )
 
@@ -36,17 +37,22 @@ func main() {
 		{8, 10},
 		{15, 18},
 	}))
+
 	fmt.Println(mergeintervals.Merge([][]int{
 		{1, 4},
 		{4, 5},
 	}))
+
 	fmt.Println(mergeintervals.Merge([][]int{
 		{1, 4},
 		{0, 4},
 	}))
+
 	fmt.Println(mergeintervals.Merge([][]int{
 		{0, 0},
 		{1, 4},
 	}))
+
+	fmt.Println(topKFrequentWords.TopKFrequent([]string{"i", "love", "leetcode", "i", "love", "coding"}, 2))
 
 }
