@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/Chipazawra/MyleetCodeProblemSolves/problems/containerWithMostWater"
 	mergeintervals "github.com/Chipazawra/MyleetCodeProblemSolves/problems/mergeIntervals"
 	"github.com/Chipazawra/MyleetCodeProblemSolves/problems/numberOfIslands"
 	topKFrequentWords "github.com/Chipazawra/MyleetCodeProblemSolves/problems/topKFrequentWords"
@@ -54,5 +55,9 @@ func main() {
 	}))
 
 	fmt.Println(topKFrequentWords.TopKFrequent([]string{"i", "love", "leetcode", "i", "love", "coding"}, 2))
+
+	fmt.Println(containerWithMostWater.MaxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}))
+
+	fmt.Println(containerWithMostWater.MaxArea([]int{1, 0, 0, 0, 0, 0, 0, 2, 2}))
 
 }
