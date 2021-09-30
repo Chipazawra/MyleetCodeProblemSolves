@@ -8,4 +8,5 @@ replace(
 //     github.com/Chipazawra/MyleetCodeProblemSolves/problems/mergeIntervals => "./problems/mergeIntervals
        github.com/Chipazawra/MyleetCodeProblemSolves/problems/topKFrequentWords => "./problems/topKFrequentWords"
        github.com/Chipazawra/MyleetCodeProblemSolves/problems/containerWithMostWater => "./problems/containerWithMostWater"
+       github.com/Chipazawra/MyleetCodeProblemSolves/problems/knapsackproblem => "./problems/knapsackproblem"
 )
